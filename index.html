@@ -4,22 +4,32 @@
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Unity WebGL Player | Spinning Test</title>
-    <link rel="shortcut icon" href="TemplateData/favicon.ico">
-    <link rel="stylesheet" href="TemplateData/style.css">
-    <script src="TemplateData/UnityProgress.js"></script>  
-    <script src="Build/UnityLoader.js"></script>
+    <link rel="shortcut icon" href="TemplateData1/favicon.ico">
+    <link rel="stylesheet" href="TemplateData1/style.css">
+    <script src="TemplateData1/UnityProgress.js"></script>  
+    <script src="Build1/UnityLoader.js"></script>
+    <script src="TemplateData2/UnityProgress.js"></script>  
+    <script src="Build2/UnityLoader.js"></script>
     <script>
-      var gameInstance = UnityLoader.instantiate("gameContainer", "Build/webGLspinTest3.json", {onProgress: UnityProgress});
+      var gameInstance1 = UnityLoader.instantiate("gameContainer1", "Build1/webGLspinTest3.json", {onProgress: UnityProgress});
+      var gameInstance2 = UnityLoader.instantiate("gameContainer2", "Build2/webGLspinTestInverted.json", {onProgress: UnityProgress});
     </script>
   </head>
   <body>
     <div class="webgl-content">
-      <div id="gameContainer" style="width: 960px; height: 600px"></div>
+      <div id="gameContainer1" style="width: 960px; height: 600px"></div>
       <div class="footer">
-        <div class="webgl-logo"></div>
-        <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
+        <div class="fullscreen" onclick="gameInstance1.SetFullscreen(1)"></div>
         <div class="title">Spinning Test</div>
       </div>
     </div>
+    <div class="webgl-content">
+      <div id="gameContainer2" style="width: 960px; height: 600px"></div>
+      <div class="footer">
+        <div class="fullscreen" onclick="gameInstance2.SetFullscreen(1)"></div>
+        <div class="title">Inverted Shader</div>
+      </div>
+    </div>
+
   </body>
 </html>
