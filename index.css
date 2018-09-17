@@ -1,3 +1,6 @@
 game-container{
     padding-top: 50px;
+    position: static !important;
+    -webkit-transform: none !important; 
+    transform: none !important; 
 }
