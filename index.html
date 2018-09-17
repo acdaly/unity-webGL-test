@@ -1,22 +1,21 @@
 <!DOCTYPE html>
 
 <html lang="en-us">
-<!-- added comment -->
+<!-- new added comment -->
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Unity WebGL Player | Spinning Test</title>
     <link rel="shortcut icon" href="TemplateData1/favicon.ico">
     <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="TemplateData1/style.css">
-    <script src="TemplateData1/UnityProgress.js"></script>  
-    <script src="Build1/UnityLoader.js"></script>
-    <script src="TemplateData2/UnityProgress.js"></script>  
-    <script src="Build2/UnityLoader.js"></script>
+    <link rel="stylesheet" href="webGLspinTestRed/TemplateData/style.css">
+    <script src="webGLspinTestRed/TemplateData/UnityProgress.js"></script>  
+    <script src="webGLspinTestRed/Build/UnityLoader.js"></script>
     
     <script>
       var gameInstance1 = UnityLoader.instantiate("gameContainer1", "Build1/webGLspinTest3.json", {onProgress: UnityProgress});
       var gameInstance2 = UnityLoader.instantiate("gameContainer2", "Build2/webGLspinTestInverted.json", {onProgress: UnityProgress});
+      var gameInstance3 = UnityLoader.instantiate("gameContainer3", "webGLspinTestRed/Build/webGLspinTestRed.json", {onProgress: UnityProgress});
     </script>
   </head>
   <body>
@@ -34,6 +33,13 @@
       <div class="footer">
         <div class="fullscreen" onclick="gameInstance2.SetFullscreen(1)"></div>
         <div class="title">Inverted Shader</div>
+      </div>
+    </div>
+    <div class="webgl-content game-container">
+      <div id="gameContainer3" style="width: 960px; height: 600px"></div>
+      <div class="footer">
+        <div class="fullscreen" onclick="gameInstance3.SetFullscreen(1)"></div>
+        <div class="title">Red Shader</div>
       </div>
     </div>
 
