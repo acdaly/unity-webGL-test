@@ -16,7 +16,7 @@
       var gameInstance1 = UnityLoader.instantiate("gameContainer1", "Build1/webGLspinTest3.json", {onProgress: UnityProgress});
       var gameInstance2 = UnityLoader.instantiate("gameContainer2", "Build2/webGLspinTestInverted.json", {onProgress: UnityProgress});
       var gameInstance3 = UnityLoader.instantiate("gameContainer3", "webGLspinTestRed/Build/webGLspinTestRed.json", {onProgress: UnityProgress});
-      var gameInstance4 = UnityLoader.instantiate("gameContainer4", "Build3/webGLspinTestColorful.json", {onProgress: UnityProgress});
+      var gameInstance4 = UnityLoader.instantiate("gameContainer3", "webGLspinTestRed/Build3/webGLspinTestColorful.json", {onProgress: UnityProgress});
     </script>
   </head>
   <body>
@@ -37,13 +37,19 @@
       </div>
     </div>
     <div class="webgl-content game-container">
+      <div id="gameContainer3" style="width: 960px; height: 600px"></div>
+      <div class="footer">
+        <div class="fullscreen" onclick="gameInstance3.SetFullscreen(1)"></div>
+        <div class="title">Red Shader</div>
+      </div>
+    </div>
+     <div class="webgl-content game-container">
       <div id="gameContainer4" style="width: 960px; height: 600px"></div>
       <div class="footer">
         <div class="fullscreen" onclick="gameInstance4.SetFullscreen(1)"></div>
         <div class="title">Colorful Shader</div>
       </div>
     </div>
-
 
   </body>
 </html>
